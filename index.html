@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT ProFinder</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; }
+    header, footer { background: #1e293b; color: white; padding: 20px 0; text-align: center; }
+    nav ul { list-style: none; padding: 0; display: flex; flex-direction: row; justify-content: center; gap: 30px; margin: 0; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    .menu-toggle { display: none; background: #3b82f6; border: none; color: white; padding: 10px 20px; margin-bottom: 10px; font-size: 1em; cursor: pointer; }
+    .hero { background: #0f172a; color: white; padding: 80px 20px; text-align: center; }
+    .hero h1 { font-size: 2.5em; margin-bottom: 10px; }
+    .hero p { font-size: 1.2em; }
+    .hero a { display: inline-block; margin-top: 20px; padding: 12px 25px; background: #3b82f6; color: white; border-radius: 5px; text-decoration: none; }
+    .section { padding: 50px 20px; max-width: 1000px; margin: auto; }
+    .section h2 { text-align: center; margin-bottom: 30px; }
+    .benefits { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .benefit { flex: 1 1 250px; background: #f1f5f9; padding: 20px; border-radius: 8px; text-align: center; }
+    form input, form textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+    form button { background: #3b82f6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+    .contact-info { display: flex; flex-direction: column; align-items: center; margin-bottom: 30px; }
+    .contact-info img { border-radius: 50%; width: 120px; height: 120px; object-fit: cover; margin-bottom: 15px; }
+    .contact-info p { margin: 5px 0; }
+    footer p { margin: 5px 0; }
+    @media (max-width: 768px) {
+      nav ul { flex-direction: column; display: none; }
+      nav ul.active { display: flex; }
+      .menu-toggle { display: block; margin: auto; }
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-links');
+      nav.classList.toggle('active');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="#uvod">Úvod</a></li>
+        <li><a href="#sluzby">Služby</a></li>
+        <li><a href="#onas">O nás</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="uvod">
+    <h1>Najdeme pro vás špičkové IT specialisty</h1>
+    <p>Rychlé, efektivní a spolehlivé propojení s odborníky v oblasti IT.</p>
+    <a href="#kontakt">Spojte se s námi</a>
+  </section>
+
+  <section class="section" id="sluzby">
+    <h2>Naše služby</h2>
+    <div class="benefits">
+      <div class="benefit">
+        <h3>Recruiting na míru</h3>
+        <p>Pomáháme firmám najít ideální IT odborníky podle konkrétních potřeb.</p>
+      </div>
+      <div class="benefit">
+        <h3>Freelance experti</h3>
+        <p>Rychlý přístup ke zkušeným IT specialistům pro krátkodobé i dlouhodobé projekty.</p>
+      </div>
+      <div class="benefit">
+        <h3>Kariérní poradenství</h3>
+        <p>Podporujeme IT profesionály v hledání nových příležitostí a růstu kariéry.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="onas">
+    <h2>O nás</h2>
+    <p>Jsme tým s vášní pro technologie a personalistiku. Rozumíme IT trhu a víme, jak propojit správné lidi se správnými příležitostmi.</p>
+  </section>
+
+  <section class="section" id="kontakt">
+    <h2>Kontaktujte nás</h2>
+    <div class="contact-info">
+      <img src="https://via.placeholder.com/120" alt="Profilová fotografie">
+      <p><strong>Libor Fačkovec</strong></p>
+      <p>libor.fackovac@gmail.com</p>
+      <p>+420 608515563</p>
+    </div>
+    <form action="https://formsubmit.co/info@itprofinder.de" method="POST">
+      <input type="text" name="name" placeholder="Vaše jméno" required>
+      <input type="email" name="email" placeholder="Váš e-mail" required>
+      <textarea name="message" rows="5" placeholder="Vaše zpráva" required></textarea>
+      <input type="text" name="_honey" style="display:none">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://itprofinder.de/dekujeme.html">
+      <button type="submit">Odeslat zprávu</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 IT ProFinder CZ</p>
+    <p><a href="#" style="color: #ccc; text-decoration: underline;">Zásady ochrany osobních údajů</a></p>
+  </footer>
+</body>
+</html>
