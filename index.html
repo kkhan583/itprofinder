@@ -20,8 +20,14 @@
     nav a { display: block; padding: 20px; color: var(--text-color); text-decoration: none; font-weight: 600; }
     nav a:hover { color: var(--primary-color); }
     .menu-toggle { display: none; }
-
-    .hero { background: linear-gradient(to right, var(--bg-light), var(--secondary-color)); color: white; padding: 100px 20px; text-align: center; }
+    
+    .logo {
+    width: 100px; /* or any size you want */
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover; /* ensures it stays nicely cropped in a circle */
+  }
+    .hero { background: white; padding: 100px 20px; text-align: center; }
     .hero img.logo { width: 200px; margin-bottom: 30px; }
     .hero h1 { font-size: 3em; margin-bottom: 10px; }
     .hero p { font-size: 1.3em; margin-bottom: 30px; }
@@ -68,8 +74,7 @@
         <li><a href="#sluzby">Služby</a></li>
         <li><a href="#onas">O nás</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
-        <li><a href="#procmy">Proč My</a></li>
-      </ul>
+       </ul>
     </nav>
   </header>
 
@@ -103,23 +108,7 @@
     <p>Jsme tým s vášní pro technologie a personalistiku. Rozumíme IT trhu a víme, jak propojit správné lidi se správnými příležitostmi. A hlavně, práce je našim koníčkem a baví nás jednat s lidmi a hledat ty správné synergie mezi kandidáty a firmami.</p>
   </section>
 
-<section class="section" id="procmy">
-    <h2>Proč si vybrat nás pro recruitment IT specialistů?</h2>
-     <div class="benefits">
-      <div class="benefit">
-        <h3>Expertíza</h3>
-        <p>Naši odborníci mají hluboké znalosti o IT trhu a aktuálních trendech v technologických oblastech.</p>
-      </div>
-      <div class="benefit">
-        <h3>Rychlost</h3>
-        <p>Díky naší rozsáhlé síti kandidátů dokážeme rychle reagovat na vaše požadavky a najít vám vhodného specialistu.</p>
-      </div>
-      <div class="benefit">
-        <h3>Kvalita</h3>
-        <p>Každý kandidát je pečlivě prověřen, aby odpovídal nejen technickým dovednostem, ale i vaší firemní kultuře.</p>
-      </div>
-    </div>
-  </section>
+
   
   <section class="section" id="kontakt">
     <h2>Kontaktujte nás</h2>
